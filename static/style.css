@@ -15,4 +15,9 @@ h1 {
 
 body {
     font-family: 'Raleway';
+    background: url(qbkls.png);
+}
+
+.container {
+    background: rgba(255,255,255,0.8);
 }
