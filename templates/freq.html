@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Word Frequency
+{% endblock %}
+
+{% block main %}
+    <h1>Word Frequency</h1>
+    <form action="/analyze-freq" enctype="multipart/form-data" method="post">
+        <p>Please either paste in the URL of a .txt file OR enter text.</p>
+        <p>
+            <label>URL</label>
+            <input autocomplete="off" autofocus class="form-control" name="url" type="text"/>
+        </p>
+        <p>
+            <label>Text</label>
+            <textarea class="form-control" name="text"></textarea>
+        </p>
+        <p>
+            <p>Enter words whose frequency you would like to analyze. Separate the words with commas.</p>
+            <input autocomplete="off" autofocus class="form-control" name="word" type="text"/>
+        </p>
+        <p>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </p>
+        <p>
+            Please be patient. Large amounts of text may take longer to process.
+        </p>
+    </form>
+{% endblock %}

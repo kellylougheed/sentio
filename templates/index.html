@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1>Sentiment Analyzer</h1>
+    <form action="/analyze" enctype="multipart/form-data" method="post">
+        <p>Please either upload a .txt file or enter text.</p>
+        <p>
+            <label>File</label>
+            <input type="file" name="file" />
+        </p>
+        <p>
+            <label>Text</label>
+            <textarea class="form-control" name="text"></textarea>
+        </p>
+        <p>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </p>
+        <p>
+            Please be patient. Large amounts of text may take longer to process.
+        </p>
+    </form>
+{% endblock %}

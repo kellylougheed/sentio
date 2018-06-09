@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1>Sentiment Analysis</h1>
+    {% if res['pos'] > res['neg'] and res['compound'] > 0 %}
+        <p class="alert alert-success">
+            This text is overall positive.
+        </p>
+    {% elif res['neg'] > res['pos'] and res['compound'] < 0 %}
+        <p class="alert alert-danger">
+            This text is overall negative.
+        </p>
+    {% else %}
+        <p class="alert alert-info">
+            This text is neutral.
+        </p>
+    {% endif %}
+
+    <h2>Raw Scores</h2>
+    <p>
+        Negative: <b>{{ res['neg'] }}%</b>
+    </p>
+    <p>
+        Positive: <b>{{ res['pos'] }}%</b>
+    </p>
+    <p>
+        Neutral: <b>{{ res['neu'] }}%</b>
+    </p>
+    <p>
+        Compound: <b>{{ res['compound'] }}</b><br/>
+        Overall score between -1 (most negative) and 1 (most positive).
+    </p>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1>Word Frequency Analysis</h1>
+    {% for w in words %}
+        <p>The word <b>{{ w["word"] }}</b> appears <b>{{ w["count"] }}</b> times and constitutes <b>{{ w["percentage"] }}% of the text.</b></p>
+    {% endfor %}
+{% endblock %}
