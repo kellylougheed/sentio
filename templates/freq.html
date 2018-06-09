@@ -7,10 +7,14 @@
 {% block main %}
     <h1>Word Frequency</h1>
     <form action="/analyze-freq" enctype="multipart/form-data" method="post">
-        <p>Please either paste in the URL of a .txt file OR enter text.</p>
+        <p>Please either upload a .txt file, give the URL of a .txt file, or enter text. Then enter words for frequency analysis.</p>
+        <p>
+            <label>File</label>
+            <input type="file" name="file" />
+        </p>
         <p>
             <label>URL</label>
-            <input autocomplete="off" autofocus class="form-control" name="url" type="text"/>
+            <input autocomplete="off" class="form-control" name="url" type="text"/>
         </p>
         <p>
             <label>Text</label>

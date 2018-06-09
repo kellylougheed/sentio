@@ -44,7 +44,7 @@ print(scores)
 file = open("wh.txt", "r")
 book = file.read()
 
-# How to get the polarity scores of the first ten sentences in the file
+# How to get the polarity scores of the first 10 sentences in the file
 book = nltk.sent_tokenize(book) # Tokenize the book into sentences
 for i in range(10): # Repeat 10 times
     sentence_scores = sid.polarity_scores(book[i])
