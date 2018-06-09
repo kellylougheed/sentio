@@ -1,3 +1,18 @@
+nav.navbar a.navbar-brand {
+    font-family: 'Abril Fatface';
+    font-size: 2rem;
+    color: #333;
+}
+
+nav.navbar a.navbar-brand:hover {
+    color: #aaa;
+}
+
 h1 {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    font-family: 'Abril Fatface';
+}
+
+body {
+    font-family: 'Raleway';
 }
